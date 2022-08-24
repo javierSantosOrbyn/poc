@@ -1,0 +1,50 @@
+#micronaut:
+#  application:
+#    name: poc
+#  metrics:
+#    export:
+#      datadog:
+#        enabled: false
+#        apiKey: PT1M
+#        step: PT1M
+#      jmx:
+#        enabled: true
+#        step: PT1M
+#  router:
+#    static-resources:
+#      swagger:
+#        mapping: /swagger/**
+#        paths: classpath:META-INF/swagger
+#      swagger-ui:
+#        mapping: /swagger-ui/**
+#        paths: classpath:META-INF/swagger/views/swagger-ui
+#datasources:
+#  default:
+#    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/root
+#    username: root
+#    password: root
+#jpa:
+#  default:
+#    packages-to-scan: [ "com.example.model" ]
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: none
+#        show_sql: true
+#        current_session_context_class: thread
+#netty:
+#  default:
+#    allocator:
+#      max-order: 3
+#liquidbase:
+#  enabled: true
+#  datasources:
+#    default:
+#      enabled: true
+#      change-log: classpath:db/liquibase-changelog.xml
+#endpoints:
+#  health.enabled: true
+#  liquibase:
+#    enabled: true
+#    sensitive: false
