@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/tables/01-create-document-type.yaml
+  - include:
+      file: db/tables/02-create-user.yaml
+  - include:
+      file: db/tables/03-create-document.yaml
+  - include:
+      file: db/data/01-document-type-initial-data.yaml

@@ -17,6 +17,8 @@ repositories {
 
 dependencies {
     implementation("org.mockito:mockito-core:4.7.0")
+    implementation("io.micronaut.kafka:micronaut-kafka")
+    implementation("io.projectreactor.netty:reactor-netty:1.0.22")
     kapt("io.micronaut:micronaut-http-validation")
     kapt("io.micronaut.openapi:micronaut-openapi")
 

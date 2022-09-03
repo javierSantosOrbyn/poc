@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: "3"
+      author: jsantos
+      changes:
+        - createTable:
+            tableName: document
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKeyName: document_pk
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: UUID
+                  constraints:
+                    foreignKeyName: user_fk
+                    references: user(id)
+                    nullable: false
+              - column:
+                  name: doc_type_id
+                  type: varchar(250)
+                  constraints:
+                    foreignKeyName: document_type_fk
+                    references: document_type(doc_type_id)
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: size
+                  type: decimal
+                  constraints:
+                    nullable: false
+              - column:
+                  name: inner_url
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: datetime
+                  constraints:
+                    nullable: false
+

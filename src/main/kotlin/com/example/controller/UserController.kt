@@ -3,10 +3,7 @@ package com.example.controller
 import com.example.model.User
 import com.example.service.UserService
 import io.micronaut.http.MediaType
-import io.micronaut.http.annotation.Body
-import io.micronaut.http.annotation.Controller
-import io.micronaut.http.annotation.Get
-import io.micronaut.http.annotation.Post
+import io.micronaut.http.annotation.*
 import jakarta.inject.Inject
 
 @Controller("/user")

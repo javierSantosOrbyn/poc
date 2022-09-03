@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.1
+      author: jsantos
+      comment: "Insert initial configuration to document_type"
+      changes:
+        - loadData:
+            tableName: document_type
+            file: db/data/document_type.csv
+            type: skip

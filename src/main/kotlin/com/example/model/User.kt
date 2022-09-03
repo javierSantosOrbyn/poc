@@ -1,5 +1,6 @@
 package com.example.model
 
+import java.sql.Date
 import java.util.*
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -8,7 +9,7 @@ import javax.persistence.Table
 import javax.validation.constraints.NotNull
 
 @Entity
-@Table(name = "public.user")
+@Table(name = "user")
 data class User(
 
     @Id
@@ -16,11 +17,27 @@ data class User(
 
     @NotNull
     @Column(nullable = false)
-    val name: String,
+    val channel: String,
 
     @NotNull
     @Column(nullable = false)
-    val age: Int
+    val email: String,
+
+    @NotNull
+    @Column(nullable = false)
+    val phone: String,
+
+    @NotNull
+    @Column(nullable = false, name = "phone_prefix")
+    val phonePefix: String,
+
+    @NotNull
+    @Column(nullable = false, name = "created_at")
+    val createdAt: Date,
+
+    @NotNull
+    @Column(nullable = false, name = "updated_at")
+    val updatedAt: Date
 
 
 )
